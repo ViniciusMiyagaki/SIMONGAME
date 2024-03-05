@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  background-color: #b92b9b;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.center2 {
+  width: 100%;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  margin: 5px;
+  color: #FEF2BF;
+}
+
+#mobile {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 1.5rem;
+  margin: 5px;
+  color: #FEF2BF;
+  cursor: pointer;
+  animation: flashing 1s infinite alternate;
+}
+
+@keyframes flashing {
+  from {
+    color: #FEF2BF;
+  }
+
+  to {
+    color: #000000;
+  }
+}
+
+.container {
+  width: 500px;
+  height: 500px;
+  margin: auto;
+  border-radius: 100%;
+  border: 10px solid black;
+  background-color: black;
+  overflow: hidden;
+  position: relative;
+}
+
+.container2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.simon {
+  width: 100px;
+  height: 100px;
+  border-radius: 100%;
+  background-color: black;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  top: 190px;
+  left: 190px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+}
+
+.btn {
+  display: inline-block;
+  height: 230px;
+  width: 230px;
+  margin: 5px;
+  border-radius: 10%;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 800px;
+    height: 800px;
+  }
+
+  .btn {
+    height: 380px;
+    width: 380px;
+  }
+
+  #level-title,
+  #mobile {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .simon {
+    width: 200px;
+    height: 200px;
+    top: 290px;
+    left: 290px;
+    font-size: 1.8rem;
+  }
+}
